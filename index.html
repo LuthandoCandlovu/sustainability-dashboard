@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>EcoPulse - Global Sustainability Dashboard</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.0/chart.umd.min.js"></script>
+    <link rel="stylesheet" href="assets/css/style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container">
+        <div class="header-content">
+          <div class="logo">
+            <img
+              src="assets/images/Image Nov 22, 2025, 03_15_12 PM.png"
+              alt="EcoPulse Logo"
+              class="logo-image"
+            />
+            <h1>EcoPulse Dashboard</h1>
+          </div>
+          <div class="nav-links">
+            <a href="#"><i class="fas fa-home"></i> Dashboard</a>
+            <a href="#"><i class="fas fa-chart-line"></i> Analytics</a>
+            <a href="#"><i class="fas fa-globe-americas"></i> Global Data</a>
+            <a href="#"><i class="fas fa-user-friends"></i> Community</a>
+            <a href="#"><i class="fas fa-cog"></i> Settings</a>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <div class="container">
+      <div class="dashboard-grid">
+        <div class="card carbon-footprint">
+          <div class="card-header">
+            <h2 class="card-title">Carbon Footprint</h2>
+            <div class="card-icon">
+              <i class="fas fa-cloud"></i>
+            </div>
+          </div>
+          <div class="stat-value">4.2 t</div>
+          <div class="stat-change negative">
+            <i class="fas fa-arrow-up"></i>
+            <span>2.4% from last month</span>
+          </div>
+          <div class="chart-container">
+            <canvas id="carbonChart"></canvas>
+          </div>
+        </div>
+
+        <div class="card energy-usage">
+          <div class="card-header">
+            <h2 class="card-title">Energy Usage</h2>
+            <div class="card-icon">
+              <i class="fas fa-bolt"></i>
+            </div>
+          </div>
+          <div class="stat-value">320 kWh</div>
+          <div class="stat-change positive">
+            <i class="fas fa-arrow-down"></i>
+            <span>5.7% from last month</span>
+          </div>
+          <div class="chart-container">
+            <canvas id="energyChart"></canvas>
+          </div>
+        </div>
+
+        <div class="card water-consumption">
+          <div class="card-header">
+            <h2 class="card-title">Water Consumption</h2>
+            <div class="card-icon">
+              <i class="fas fa-tint"></i>
+            </div>
+          </div>
+          <div class="stat-value">4500 L</div>
+          <div class="stat-change positive">
+            <i class="fas fa-arrow-down"></i>
+            <span>3.1% from last month</span>
+          </div>
+          <div class="chart-container">
+            <canvas id="waterChart"></canvas>
+          </div>
+        </div>
+
+        <div class="card waste-management">
+          <div class="card-header">
+            <h2 class="card-title">Waste Management</h2>
+            <div class="card-icon">
+              <i class="fas fa-recycle"></i>
+            </div>
+          </div>
+          <div class="stat-value">68%</div>
+          <div class="stat-change positive">
+            <i class="fas fa-arrow-up"></i>
+            <span>4.2% from last month</span>
+          </div>
+          <div class="chart-container">
+            <canvas id="wasteChart"></canvas>
+          </div>
+        </div>
+      </div>
+
+      <div class="main-content">
+        <div class="left-column">
+          <div class="global-map">
+            <div class="map-header">
+              <h2>Global Environmental Impact</h2>
+              <select id="metricSelector">
+                <option value="carbon">Carbon Emissions</option>
+                <option value="forest">Forest Cover</option>
+                <option value="renewable">Renewable Energy</option>
+                <option value="water">Water Quality</option>
+              </select>
+            </div>
+            <div class="map-placeholder">
+              <i
+                class="fas fa-globe-americas"
+                style="font-size: 3rem; margin-right: 15px"
+              ></i>
+              Interactive World Map Visualization
+            </div>
+          </div>
+
+          <div class="community-section">
+            <div class="community-header">
+              <h2>Sustainability Community</h2>
+              <button class="action-btn">Join Community</button>
+            </div>
+            <div class="community-stats">
+              <div class="community-stat">
+                <div class="community-stat-value">12,458</div>
+                <div class="community-stat-label">Active Members</div>
+              </div>
+              <div class="community-stat">
+                <div class="community-stat-value">342</div>
+                <div class="community-stat-label">Projects Completed</div>
+              </div>
+              <div class="community-stat">
+                <div class="community-stat-value">28.5k</div>
+                <div class="community-stat-label">Trees Planted</div>
+              </div>
+            </div>
+            <div class="recommendation-item">
+              <div class="rec-icon">
+                <i class="fas fa-hands-helping"></i>
+              </div>
+              <div class="rec-content">
+                <h3>Community Clean-up Event</h3>
+                <p>
+                  Join 250+ volunteers this Saturday for a beach clean-up at
+                  Santa Monica.
+                </p>
+                <button class="action-btn">RSVP Now</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="right-column">
+          <div class="recommendations">
+            <h2>Personalized Recommendations</h2>
+            <div class="recommendation-item">
+              <div class="rec-icon">
+                <i class="fas fa-solar-panel"></i>
+              </div>
+              <div class="rec-content">
+                <h3>Switch to Solar</h3>
+                <p>
+                  Based on your energy usage, you could save $45/month with
+                  solar panels.
+                </p>
+              </div>
+            </div>
+            <div class="recommendation-item">
+              <div class="rec-icon">
+                <i class="fas fa-car"></i>
+              </div>
+              <div class="rec-content">
+                <h3>Reduce Car Usage</h3>
+                <p>
+                  Try biking or public transport twice a week to reduce your
+                  carbon footprint.
+                </p>
+              </div>
+            </div>
+            <div class="recommendation-item">
+              <div class="rec-icon">
+                <i class="fas fa-shopping-bag"></i>
+              </div>
+              <div class="rec-content">
+                <h3>Sustainable Shopping</h3>
+                <p>
+                  Switch to reusable bags and buy local produce to reduce waste.
+                </p>
+              </div>
+            </div>
+            <div class="recommendation-item">
+              <div class="rec-icon">
+                <i class="fas fa-leaf"></i>
+              </div>
+              <div class="rec-content">
+                <h3>Plant Trees</h3>
+                <p>
+                  Join our tree-planting initiative to offset your carbon
+                  emissions.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <footer>
+      <div class="container">
+        <p>
+          EcoPulse Dashboard &copy; 2023 | Making the World a Better Place, One
+          Metric at a Time
+        </p>
+        <p>Data updates every 24 hours | Last updated: October 15, 2023</p>
+      </div>
+    </footer>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>
