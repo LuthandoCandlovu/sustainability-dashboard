@@ -727,7 +727,7 @@ npx live-server
 <br>
 
 <a href="mailto:contact@ecopulse.com">
-  <img src="https://img.shields.io/badge/📧_Email-Contact_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=1a1a1a" alt="Email"/>
+  <img src="https://img.shields.io/badge/📧_Email-Contact_Me-EA4335?style=for-the-badge&logo=gmail&logoColor=white&labelColor=1a1a1a" alt="luthando.candlovu30@gmail.com"/>
 </a>
 <a href="https://github.com/LuthandoCandlovu">
   <img src="https://img.shields.io/badge/💻_GitHub-Follow-181717?style=for-the-badge&logo=github&logoColor=white&labelColor=1a1a1a" alt="GitHub"/>
